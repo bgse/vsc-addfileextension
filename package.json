@@ -1,0 +1,31 @@
+{
+	"name": "addfileextension",
+	"displayName": "AddFileExtension",
+	"description": "Allows to add a file by giving a path relative to the working folder.",
+	"version": "0.0.1",
+	"publisher": "bgse",
+	"engines": {
+		"vscode": "^0.10.1"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:extension.addFile"
+	],
+	"main": "./out/src/extension",
+	"contributes": {
+		"commands": [{
+			"command": "extension.addFile",
+			"title": "Folder: Add File"
+		}]
+	},
+	"scripts": {
+		"vscode:prepublish": "node ./node_modules/vscode/bin/compile",
+		"compile": "node ./node_modules/vscode/bin/compile -watch -p ./"
+	},
+	"devDependencies": {
+		"typescript": "^1.6.2",
+		"vscode": "0.10.x"
+	}
+}
