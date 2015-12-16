@@ -36,8 +36,14 @@ export function activate(context: vscode.ExtensionContext) {
 			vscode.workspace.openTextDocument(vscode.Uri.parse("untitled:" + lsFullpath)).then(function(poDocument: vscode.TextDocument){
 				vscode.window.showTextDocument(poDocument).then(function(poEditor: vscode.TextEditor){
 					//
+				}, function(reason: any){
+					vscode.window.showErrorMessage("Could not bring up editor: " + reason);
 				});
+			}, function(reason: any){
+				vscode.window.showErrorMessage("Could not open file: " + reason);
 			});
+		},function(reason: any){
+			vscode.window.showErrorMessage("Could not open InputBox: " + reason);
 		});
 	});
 	
