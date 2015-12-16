@@ -17,3 +17,7 @@ Keyboard shortcut:
 Your file will be opened in a new editor window, and shown in working files.
 
 You may now save the file, which will add it to your working folder (along with any directory that needs to be created), or dismiss the editor and discard the unsaved file in working files if you changed your mind.
+
+### Windows
+
+You may use Unix-like path separators if you like (you do not have to, but they can sometimes be easier to type on international keyboards), e.g. 'foo/bar/myfile.ts' if you intend to add 'foo\bar\myfile.ts'.
