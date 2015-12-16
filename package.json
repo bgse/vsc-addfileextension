@@ -2,7 +2,11 @@
 	"name": "addfileextension",
 	"displayName": "AddFileExtension",
 	"description": "Allows to add a file by giving a path relative to the working folder.",
-	"version": "0.1.0",
+	"repository" : {
+	"type" : "git"
+	, "url" : "https://github.com/bgse/vsc-addfileextension.git"
+	},
+	"version": "0.1.1",
 	"publisher": "bgse",
 	"engines": {
 		"vscode": "^0.10.1"
