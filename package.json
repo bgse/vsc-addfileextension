@@ -2,7 +2,7 @@
 	"name": "addfileextension",
 	"displayName": "AddFileExtension",
 	"description": "Allows to add a file by giving a path relative to the working folder.",
-	"version": "0.0.1",
+	"version": "0.1.0",
 	"publisher": "bgse",
 	"engines": {
 		"vscode": "^0.10.1"
@@ -11,12 +11,12 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:extension.addFile"
+		"onCommand:addfileextension.addFile"
 	],
 	"main": "./out/src/extension",
 	"contributes": {
 		"commands": [{
-			"command": "extension.addFile",
+			"command": "addfileextension.addFile",
 			"title": "Folder: Add File"
 		}]
 	},

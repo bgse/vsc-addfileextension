@@ -12,7 +12,7 @@ Using the command palette:
 
 Keyboard shortcut:
 
-* Add a user keyboard shortcut for command "extension.addFile"
+* Add a user keyboard shortcut for command "addfileextension.addFile"
 
 Your file will be opened in a new editor window, and shown in working files.
 
