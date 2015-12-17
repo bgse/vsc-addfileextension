@@ -26,6 +26,13 @@ export function activate(context: vscode.ExtensionContext) {
 		// Prompt the user for a path
 		vscode.window.showInputBox({prompt: "Provide file path relative to project folder."}).then(function(psPath: string){
 			
+			// Refuse to work if user input ends with a path separator
+			// Check both variants here, since we advertise windows users can use unix separators
+			if(psPath.endsWith('\\') || psPath.endsWith('/')){
+				vscode.window.showErrorMessage("Creating directories is not supported at this time, please specify a file.");
+				return;
+			}
+			
 			// Add leading path separator if necessary
 			if(!psPath.startsWith(path.sep)){
 				psPath = path.sep + psPath;
