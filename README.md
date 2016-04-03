@@ -1,6 +1,6 @@
 # AddFileExtension
 ## Purpose
-Allows you to add files to your working folder by typing in a path relative to the working folder.
+Allows you to add files by typing in a path relative to the working folder or active file.
 Missing subfolders are created automatically.
 ## Usage
 
