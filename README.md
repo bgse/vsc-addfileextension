@@ -7,12 +7,24 @@ Missing subfolders are created automatically.
 Using the command palette:
 
 * Bring up the command palette, and select "Folder: Add file".
-* In the input box, type the path to your file, relative to your working folder.
+* In the input box, type the path to your file, according to behaviour table below.
 * Press [Enter] to confirm, or [Escape] to cancel.
 
 Keyboard shortcut:
 
 * Add a user keyboard shortcut for command "addfileextension.addFile"
+
+Table of behaviors:
+
+Project folder open | Text editor open | Given path begins with '/' | Behavior
+---|----|----|----
+✓ | ✓ | ✓ | Create path relative to workspace root
+✓ | ✓ | ✗ | Create path relative to active file
+✓ | ✗ | ✓ | Create path relative to workspace root
+✓ | ✗ | ✗ | Create path relative to workspace root
+✗ | ✓ | ✓ | Error message: "Paths beginnning with '/' not allowed when no project folder is open"
+✗ | ✓ | ✗ | Create path relative to active file
+✗ | ✗ | N/A | Falls back on the built-in new file command
 
 Your file will be opened in a new editor window, and shown in working files.
 
