@@ -70,7 +70,7 @@ export function activate(context: vscode.ExtensionContext) {
 			}
 			
 			// If given path begins with slash, use project root path (if a folder is open)
-			const beginsWithSlash = psPath.match(/^\/|\\/);
+			const beginsWithSlash = psPath.match(/^[\/\\]/);
 			if(beginsWithSlash && !workspace.rootPath){
 				return window.showErrorMessage("Paths beginnning with '/' not allowed when no project folder is open");
 			}
