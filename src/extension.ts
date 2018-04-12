@@ -81,9 +81,9 @@ export function activate(context: vscode.ExtensionContext) {
 				path.dirname(activeFilePath) : workspace.rootPath
 	
 			// path.resolve takes care of normalization and platform path separators
-			const lsFullpath: string = path.resolve(basePath, psPath);
+			const uri = vscode.Uri.file(path.resolve(basePath, psPath)).with({scheme: "untitled"});
 
-			vscode.workspace.openTextDocument(vscode.Uri.parse("untitled:" + lsFullpath)).then(function(poDocument: vscode.TextDocument){
+			vscode.workspace.openTextDocument(uri).then(function(poDocument: vscode.TextDocument){
 				vscode.window.showTextDocument(poDocument).then(function(poEditor: vscode.TextEditor){
 					//
 				}, function(reason: any){
